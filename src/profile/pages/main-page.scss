@@ -1,4 +1,5 @@
 @import '@/profile/plugins/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Reggae+One&display=swap');
 
 /*zero*/
 ul {
@@ -7,15 +8,23 @@ ul {
     list-style-type: none;
   }
 }
+.title {
+  font-family: $fontTitle;
+}
+.content-font {
+  font-family: $fontContent;
+}
 
 /*header*/
 .header__row {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   background-color: #445162;
   color: white;
-  height: 300px;
+  height: max-content;
+  border-radius: 5px;
   h1 {
     margin-bottom: 30px;
   }
@@ -30,6 +39,7 @@ ul {
     }
   }
   .header__item2 {
+    padding: 5px;
     img {
       border-radius: 10px;
     }
@@ -42,14 +52,150 @@ ul {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    flex-wrap: wrap;
+    .what__item1 {
+      display: flex;
+      align-items: center;
+    }
     .what__item2 {
       width: 500px;
-      color: #445162;
+      color: black;
+      display: flex;
+      flex-direction: column;
       h1 {
       }
       p {
         font-size: $fontForList;
       }
+    }
+  }
+  .body__facts {
+    background-color: #445162;
+    border-radius: 5px;
+    .facts__title {
+      text-align: center;
+      padding-top: 20px;
+    }
+    .facts__items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      .facts__item {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 500px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .item__img {
+          img {
+            border-radius: 7px;
+          }
+        }
+        .item__text {
+          display: flex;
+          flex-direction: column;
+          margin-left: 10px;
+          .text__title {
+            font-size: 26px;
+          }
+          .text__content {
+            font-size: 16px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+  .body__utterances {
+    margin-bottom: 70px;
+    .utterances__title {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .utterances__items {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      .utterances__item {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        border-radius: 5px;
+        margin: 20px;
+        background-color: #445162;
+        border: 1px solid #445162;
+        .item__title {
+          text-align: center;
+          font-size: 24px;
+          color: white;
+          margin: 10px 0;
+        }
+        .item__subtitle {
+          text-align: center;
+          font-size: 28px;
+          background-color: white;
+          color: #445162;
+          padding: 10px 0;
+        }
+        .item__text {
+          font-size: 16px;
+          color: white;
+          padding: 30px 10px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}
+
+/*footer*/
+.footer {
+  background-color: #445162;
+  border-radius: 5px;
+  .footer__title {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+  }
+  .footer__links {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    img {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .header__item1 {
+    margin-left: 10px;
+  }
+  .header__item2 {
+    img {
+      width: 300px;
+      padding-bottom: 10px;
+    }
+  }
+  .item__img {
+    display: flex;
+    align-items: center;
+    img {
+      width: 120px;
+      margin-left: 10px;
+    }
+  }
+  .what__item1 {
+    img {
+      width: 300px;
+    }
+  }
+  .footer {
+    .footer__links {
+      justify-content: space-around;
     }
   }
 }

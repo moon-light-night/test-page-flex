@@ -1,10 +1,10 @@
 <template>
   <div class="header__row">
     <div class="header__item1">
-      <div class="header__title">
+      <div class="header__title title">
         <h1>Hi dude, guess your plans:</h1>
       </div>
-      <ul class="header__list">
+      <ul class="header__list content-font">
         <li><img src="@/assets/check-icon.png" />Finish school</li>
         <li><img src="@/assets/check-icon.png" />Finish university</li>
         <li><img src="@/assets/check-icon.png" />Get a regular job</li>
