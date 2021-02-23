@@ -1,8 +1,4 @@
 # test-page-flex
-#View
-```
-https://mst-page.web.app/
-```
 
 ## Project setup
 ```
@@ -14,9 +10,9 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### View
 ```
-npm run build
+https://mst-page.web.app
 ```
 
 ### Customize configuration
